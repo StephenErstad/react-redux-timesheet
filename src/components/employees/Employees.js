@@ -29,7 +29,7 @@ class Employees extends Component {
   }
 }
 
-mapStateToProps(state)
+function mapStateToProps(state)
 {
   return {
     employees: state.employees.employees
@@ -37,7 +37,7 @@ mapStateToProps(state)
 }
 ;
 
-mapDispatchToProps(dispatch)
+function mapDispatchToProps(dispatch)
 {
   return {
     actions: bindActionCreators(EmployeeActions, dispatch)
