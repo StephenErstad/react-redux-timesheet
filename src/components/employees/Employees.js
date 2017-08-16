@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import EmployeeTable from './EmployeeTable';
+import {PageHeader, Grid, Row} from 'react-bootstrap';
+
 class Employees extends Component {
 
   constructor(props) {
@@ -31,7 +34,18 @@ class Employees extends Component {
   }
 
   // TODO - actually implement this for realz
-  render() {return (<div />);}
+  render() {
+    return (
+        <Grid>
+          <Row>
+            <PageHeader>Employees</PageHeader>
+          </Row>
+          <Row>
+            <EmployeeTable employees={this.state.pageConfig.data}/>
+          </Row>
+        </Grid>
+    );
+  }
 }
 
 export default Employees;
